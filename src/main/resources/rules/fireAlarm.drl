@@ -1,0 +1,20 @@
+package br.com.itsmemario.drools.rules;
+
+import br.com.itsmemario.drools.*;
+
+rule "turn spinkler on"
+	when
+		$fire : Fire($room : room)
+		$sprinkler : Sprinkler( room == $room )
+	then
+		System.out.println("Fire in the room... " + $room.getName() );
+		$sprinkler.activate();
+end
+
+rule "switch alarm on"
+	when
+		exists Fire()
+	then
+		System.out.println("Fire! Fire! Fire!");
+		new Alarm();
+end
