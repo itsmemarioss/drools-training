@@ -14,7 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <drools-version>7.23.0.Final</drools-version>
     <slf4j-version>1.7.26</slf4j-version>
-    <junit-version>4.12</junit-version>
+    <junit-version>4.13.1</junit-version>
   </properties>
 
   <dependencyManagement>
